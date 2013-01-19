@@ -7,6 +7,7 @@ var server = http.createServer(function(req, res){
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', req.headers['access-control-request-headers']);
+  res.setHeader('Access-Control-Expose-Headers', 'Location');
 
   // Return CORS headers when OPTIONS method is received
   if( req.method === 'OPTIONS' ) {
