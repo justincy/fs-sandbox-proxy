@@ -8,7 +8,7 @@ var server = http.createServer(function(req, res){
   res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
 
   // Return CORS headers when OPTIONS method is received
-  if( request.method === 'OPTIONS' ) {
+  if( req.method === 'OPTIONS' ) {
     res.statusCode = 200;
     res.end();
   }
