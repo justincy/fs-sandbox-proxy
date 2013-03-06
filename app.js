@@ -4,7 +4,8 @@ var request = require('request'),
     
 var server = http.createServer(function(req, res){
 
-  res.setHeader('Access-Control-Allow-Origin', 'https://familysearch.org');
+  //res.setHeader('Access-Control-Allow-Origin', 'https://familysearch.org');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'authorization, content-type, x-reason');
   res.setHeader('Access-Control-Expose-Headers', 'location, link');
