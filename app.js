@@ -4,7 +4,6 @@ var request = require('request'),
     
 var server = http.createServer(function(req, res){
 
-  //res.setHeader('Access-Control-Allow-Origin', 'https://familysearch.org');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'authorization, content-type, x-reason');
@@ -23,7 +22,7 @@ var server = http.createServer(function(req, res){
     req.pipe(request(proxyUrl)).pipe(res);
   }
 
-}).listen(process.env.PORT || 80, function(){
+}).listen(process.env.PORT || 3000, function(){
   console.log("Web server listening on", server.address().port);
 });
 
