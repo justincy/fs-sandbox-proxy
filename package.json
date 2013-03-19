@@ -8,6 +8,6 @@
     "npm": "1.1.49"
   },
   "dependencies": {
-    "request": "*"
+    "request": "2.12.x"
   }
 }
